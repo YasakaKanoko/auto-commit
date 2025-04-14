@@ -19,9 +19,6 @@ jobs:
          persist-credentials: false
          fetch-depth: 0
          
-      - name: Pull latest changes
-        run: |
-          git pull origin master --rebase
           
       - name: Modify last update
         run: |
@@ -55,3 +52,4 @@ jobs:
           directory: "."
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: master
+          force: true
